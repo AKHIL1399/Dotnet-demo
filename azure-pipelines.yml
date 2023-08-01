@@ -19,7 +19,7 @@ variables:
   imagePullSecret: 'dockerregister11334a4d0-auth'
 
   # Agent pool name
-  pool name: 'sk-agent'
+  pool name: 'Akhil-DevOps-Pipeline'
 
 
 stages:
@@ -29,7 +29,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: $(vmImageName)
+      name: $(pool name)
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
